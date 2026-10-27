@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en-GB"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#153d36"><meta name="description" content="Find your student home with a clearer picture of rent, bills and life with your landlord. Rent Radar interactive prototype."><title>Rent Radar — A little clarity. A better home.</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<svg class="symbols" xmlns="http://www.w3.org/2000/svg"><defs>
+<symbol id="search" viewBox="0 0 24 24"><circle cx="10.8" cy="10.8" r="7.2"/><path d="m16 16 5 5"/></symbol>
+<symbol id="heart" viewBox="0 0 24 24"><path d="M20.8 4.8a5.5 5.5 0 0 0-7.8 0L12 5.9l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.4a5.5 5.5 0 0 0 0-7.8Z"/></symbol>
+<symbol id="bell" viewBox="0 0 24 24"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4"/></symbol>
+<symbol id="arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></symbol>
+<symbol id="chevron" viewBox="0 0 24 24"><path d="m8 10 4 4 4-4"/></symbol>
+<symbol id="pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+<symbol id="check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+<symbol id="shield" viewBox="0 0 24 24"><path d="m12 2 8 4v6c0 5-8 10-8 10S4 17 4 12V6Z"/><path d="m8 12 3 3 5-6"/></symbol>
+<symbol id="bed" viewBox="0 0 24 24"><path d="M3 18v3m18-3v3M3 11V5h18v6M3 18v-7h18v7Zm3-7V8h5v3m2 0V8h5v3"/></symbol>
+<symbol id="walk" viewBox="0 0 24 24"><circle cx="14" cy="4" r="2"/><path d="m7 21 4-7 4 3 1 5M5 12l4-4h5l2 5h4m-9-5-1 6"/></symbol>
+<symbol id="grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></symbol>
+<symbol id="sliders" viewBox="0 0 24 24"><path d="M4 7h6m4 0h6M4 17h10m4 0h2"/><circle cx="12" cy="7" r="2"/><circle cx="16" cy="17" r="2"/></symbol>
+<symbol id="calculator" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M8 6h8M8 11h1m6 0h1m-8 4h1m6 0h1m-8 4h1m6 0h1"/></symbol>
+<symbol id="compare" viewBox="0 0 24 24"><path d="M8 3v18M16 3v18M3 8l5-5 5 5m-2 8 5 5 5-5"/></symbol>
+<symbol id="close" viewBox="0 0 24 24"><path d="m6 6 12 12M6 18 18 6"/></symbol>
+<symbol id="info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6m0-10v1"/></symbol>
+<symbol id="spark" viewBox="0 0 24 24"><path d="m12 2 3 7 7 3-7 3-3 7-3-7-7-3 7-3Z"/></symbol>
+<symbol id="clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l4 2"/></symbol>
+<symbol id="menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
+</defs></svg>
+<aside class="sidebar" id="sidebar">
+<a href="#explore" class="brand" aria-label="Rent Radar home"><img src="assets/logo.png" alt="rent radar"></a>
+<div class="side-label">YOUR NEXT CHAPTER</div>
+<nav aria-label="Main navigation">
+<a href="#explore" data-page="explore" class="nav-link active"><svg><use href="#search"/></svg>Find a home</a>
+<a href="#saved" data-page="saved" class="nav-link"><svg><use href="#heart"/></svg>Saved homes <span class="count" id="saveCount">0</span></a>
+<a href="#alerts" data-page="alerts" class="nav-link"><svg><use href="#bell"/></svg>My alerts <span class="nav-dot" id="alertDot" hidden></span></a>
+<a href="#budget" data-page="budget" class="nav-link"><svg><use href="#calculator"/></svg>Budget planner</a>
+<a href="#contracts" data-page="contracts" class="nav-link"><svg><use href="#info"/></svg>Contract checker</a>
+<a href="#reviews" data-page="reviews" class="nav-link"><svg><use href="#shield"/></svg>Tenant reviews</a>
+<a href="#profile" data-page="profile" class="nav-link"><svg><use href="#check"/></svg>Student profile</a>
+<div class="side-label portal-label">PARTNER WORKSPACES</div>
+<a href="#landlords" data-page="landlords" class="nav-link"><svg><use href="#bed"/></svg>Landlords & agents</a>
+<a href="#university" data-page="university" class="nav-link"><svg><use href="#grid"/></svg>University insights</a>
+</nav>
+<div class="side-note"><span class="small-radar">◎</span><h3>Good homes.<br>Fairer rents.</h3><p>A little local knowledge makes a big difference.</p><button class="text-btn" data-action="how">How Rent Radar works <span>↗</span></button></div>
+<div class="sidebar-bottom"><div class="free-badge"><svg><use href="#shield"/></svg>Always free for students</div><div class="profile"><span class="avatar">S</span><div><strong>Student explorer</strong><small>Southampton</small></div><span class="profile-dot"></span></div></div>
+</aside>
+<div class="app-shell">
+<header class="topbar"><button class="icon-btn mobile-menu" aria-label="Toggle navigation" data-action="menu"><svg><use href="#menu"/></svg></button><div class="breadcrumb">Your city <span>/</span> <strong>Southampton</strong><span class="city-dot"></span></div><div class="top-actions"><span class="prototype-pill">Interactive prototype</span><button class="icon-btn notification" aria-label="Open alerts" data-action="alerts"><svg><use href="#bell"/></svg></button><span class="top-avatar">S</span></div></header>
+<main id="main"></main>
+<footer class="footer"><span>© Rent Radar <span class="footer-year"></span></span><span>Made for the next chapter.</span><button data-action="data">About the demo data</button></footer>
+</div>
+<dialog id="modal"><div id="modalContent"></div></dialog>
+<div class="toast" id="toast" role="status"></div>
+<div id="compareTray"></div>
+<script src="vendor/mammoth.browser.min.js"></script>
+<script src="vendor/jspdf.umd.min.js"></script>
+<script src="app.js"></script>
+</body></html>
